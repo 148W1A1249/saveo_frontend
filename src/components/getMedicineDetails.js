@@ -5,7 +5,7 @@ const GetMedicineDetails = ()=>{
      const [queryId, setqueryId] = useState("")
      useEffect(()=>{
         async function getData(){
-            const res = await axios.get('http://localhost:8000/getMedicineid',{
+            const res = await axios.get('https://saveo-backend.herokuapp.com/getMedicineid',{
                 headers:{
                     'Content-Type': 'application/json'
                 }
@@ -18,7 +18,7 @@ const GetMedicineDetails = ()=>{
         e.preventDefault();
         console.log(queryId);
         try {
-            const res = await axios.post('http://localhost:8000/getMedicineDetails',{queryId},{
+            const res = await axios.post('https://saveo-backend.herokuapp.com/getMedicineDetails',{queryId},{
                 headers:{
                     'Content-Type': 'application/json'
                 }
