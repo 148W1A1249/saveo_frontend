@@ -7,7 +7,7 @@ const PlaceOrder = ()=>{
      const [Quantity, setQuantity] = useState("");
      useEffect(()=>{
         async function getData(){
-            const res = await axios.get('http://localhost:8000/getMedicineid',{
+            const res = await axios.get('https://saveo-backend.herokuapp.com/getMedicineid',{
                 headers:{
                     'Content-Type': 'application/json'
                 }
@@ -24,7 +24,7 @@ const PlaceOrder = ()=>{
          console.log(Quantity)
 
          try {
-            const res = await axios.post('http://localhost:8000/placeorder',{queryId,medicineName,Quantity},{
+            const res = await axios.post('https://saveo-backend.herokuapp.com/placeorder',{queryId,medicineName,Quantity},{
                 headers:{
                     'Content-Type': 'application/json'
                 }
