@@ -5,6 +5,7 @@ import PlaceOrder from './components/placeOrder';
 function App(){
     return <>
     <div className="container">
+    <div className="font-weight-bold mt-5"><span >Note: please check console for outputs for every task</span></div>
     <UploadFile/>
     <hr className="bg-dark mt-5" />
     <SearchMedicine/>
