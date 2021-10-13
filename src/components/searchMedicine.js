@@ -7,7 +7,7 @@ const SearchMedicine = ()=>{
         console.log(search)
         
         try {
-            const res = await axios.post('http://localhost:8000/searchMedicine',{search},{
+            const res = await axios.post('https://saveo-backend.herokuapp.com/searchMedicine',{search},{
                 headers:{
                     'Content-Type': 'application/json'
                 }
